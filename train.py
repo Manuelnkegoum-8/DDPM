@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 import matplotlib.pyplot as plt
 from torchvision.transforms import Compose, ToTensor, Lambda,Resize
-from torchvision.datasets.mnist import MNIST, FashionMNIST
+from torchvision.datasets.mnist import MNIST,CelebA
 import argparse,random
 from network.DDPM import*
 from utils import*
@@ -68,7 +68,7 @@ if __name__=='__main__':
         ToTensor(),
         Lambda(lambda x: (x - 0.5) * 2)]
     )
-    ds_fn = FashionMNIST if fashion else MNIST
+    ds_fn = CelebA if fashion else MNIST
     dataset = ds_fn("./datasets", download=True, train=True, transform=transform)
     loader = DataLoader(dataset, batch_size, shuffle=True)
     num_epochs = int(training_steps*batch_size / len(dataset))
