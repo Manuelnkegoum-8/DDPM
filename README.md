@@ -25,7 +25,7 @@ python train.py --size 32 num_blocks 2 --num_steps 10000
 ## Citation
 
 ```
-@article{lee2021vision,
+@article{ho2020denoising,
   title={Denoising Diffusion Probabilistic Models},
   author={Jonathan Ho,Ajay Jain,Pieter Abbee},
   journal={arXiv preprint arXiv:2006.11239.},
