@@ -1,4 +1,5 @@
-
+from tqdm.auto import tqdm
+import torch
 def training_loop(ddpm, loader, n_epochs, optim, device, criterion, store_path="ddpm_model.pt"):
     best_loss = float("inf")
     n_steps = ddpm.n_steps

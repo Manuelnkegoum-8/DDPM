@@ -1,11 +1,10 @@
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-from tqdm.auto import tqdm
 import torch.nn as nn
 import matplotlib.pyplot as plt
 from torchvision.transforms import Compose, ToTensor, Lambda,Resize
 from torchvision.datasets.mnist import MNIST, FashionMNIST
-import argparse
+import argparse,random
 from network.DDPM import*
 from utils import*
 
@@ -32,6 +31,16 @@ parser.add_argument("--batch_size", type=int, default=128)
 parser.add_argument("--num_steps", type=int, default=10000)
 
 args = parser.parse_args()
+
+# Setting reproducibility
+SEED = 126
+random.seed(SEED)
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+
+# Definitions
+STORE_PATH_MNIST = f"ddpm_model_mnist.pt"
+STORE_PATH_FASHION = f"ddpm_model_fashion.pt"
 
 fashion = False
 batch_size = args.batch_size
