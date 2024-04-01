@@ -3,7 +3,8 @@ from torch.utils.data import DataLoader
 import torch.nn as nn
 import matplotlib.pyplot as plt
 from torchvision.transforms import Compose, ToTensor, Lambda,Resize
-from torchvision.datasets.mnist import MNIST,CelebA
+from torchvision.datasets.mnist import MNIST
+from torchvision.datasets import CelebA
 import argparse,random
 from network.DDPM import*
 from utils import*
