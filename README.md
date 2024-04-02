@@ -7,7 +7,7 @@
 ## Abstract
 
 In this project, we explore the use of denoising diffusion probabilistic models (DDPMs) for image generation. DDPMs are a class of generative models that learn to reverse a diffusion process, gradually transforming a noisy image into a realistic one. Unlike other generative models such as GANs and VAEs, DDPMs do not require adversarial training or explicit likelihood estimation, making them easier to train and more stable.
-We implement a DDPM model using PyTorch and train it on the MNIST dataset.
+We implement a DDPM model using PyTorch and train it on MNIST/FahionMNIST datasets.
 
 ## How to Use
 To install the depedencies
@@ -20,7 +20,9 @@ To train the model, run the following command:
 python train.py --size 32 num_blocks 2 --num_steps 10000
 ```
 ## Generated images
-<img src="./results/samples.png" width="1000" height="200">
+<img src="./results/samples.png" width="500" height="500">
+<img src="./results/fashion.png" width="500" height="500">
+
 
 ## Citation
 
