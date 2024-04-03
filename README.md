@@ -20,7 +20,7 @@ To train the model, run the following command:
 python train.py --size 32 num_blocks 2 --num_steps 10000
 ```
 ## Generated images
-<img src="./results/samples.png" width=100" height="100">
+<img src="./results/samples.png" width="100" height="100">
 <img src="./results/fashion.png" width="100" height="100">
 
 
